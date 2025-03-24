@@ -147,6 +147,10 @@ routes.post("/signup", async (req, res) => {
 
 //login routes for adminusers
 
+routes.get("/",(req,res)=>{
+    res.json({messgae:"from server"})
+})
+
 routes.post("/login", async (req, res) => {
 
     const data = req.body
