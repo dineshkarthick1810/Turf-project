@@ -147,7 +147,7 @@ routes.post("/signup", async (req, res) => {
 
 //login routes for adminusers
 
-routes.get("/",(req,res)=>{
+routes.get("/message",(req,res)=>{
     res.json({messgae:"from server"})
 })
 
