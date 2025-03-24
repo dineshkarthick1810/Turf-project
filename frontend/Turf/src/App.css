@@ -1,0 +1,91 @@
+.fordot{
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 0px;
+    border-radius: "50%";
+   
+    bottom: 17px;
+
+}
+
+body{
+    overflow-y: scroll !important;
+}
+.for-form{
+    width: 400px;
+}
+.form-control{
+    width:300px;
+}
+@media all and (max-width:1199px){
+    .fordot{
+        background-color: red;
+        width: 10px;
+        height: 10px;
+        position: absolute; 
+        border-radius: "50%";
+        right:22px ;
+        bottom: 5px;
+
+
+    }
+}
+
+@media all and (max-width:767px){
+    .forGap{
+        margin-top: 20px;
+    }
+}
+
+@media all and (max-width:991px){
+    .fortable{
+        white-space: nowrap;
+        display:"block";
+    }
+}
+
+@media all and (min-width:400px) and (max-width:440px){
+    .forparent{
+        width: 300px !important;
+        display: flex;
+        
+    }
+    
+    .for-form{
+        width:200px;
+    }
+}
+@media all and (max-width:399px){
+
+    .forparent{
+        width: 200px !important;
+        display: flex;
+        
+    }
+    
+    .for-form{
+        width:180px;
+    }
+
+}
+@media all and (min-width:441px) and (max-width:480px){
+
+    .forparent{
+        width: 200px !important;
+        display: flex;
+        
+    }
+    
+    .for-form{
+        width:180px;
+    }
+
+}
+
+@media all and (max-width:767px){
+    .forproduct{
+        margin-top: 20px;
+    }
+}

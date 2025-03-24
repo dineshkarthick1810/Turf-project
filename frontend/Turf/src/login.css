@@ -1,0 +1,20 @@
+.forlogin{
+    width: 800px;
+}
+
+
+@media all and (max-width:360px){
+    .forlogin{
+        width: 270px;
+        
+    }
+
+}
+
+@media all and (max-width:500px) and (min-width:361px){
+    .forlogin{
+        width: 320px;
+        
+    }
+
+}
