@@ -22,11 +22,7 @@ app.use("/api",routes)
 
 
 
-app.listen(3002,()=>{
-
-
-    console.log("server started")
-})
+module.exports=app
 
 
 
