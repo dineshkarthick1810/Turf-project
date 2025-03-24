@@ -70,9 +70,10 @@ const Mycart = () => {
 
                 <td>{res.time}</td>
                 <td>
-                    {res.decline && <p className='text-white btn btn-danger' style={{fontWeight:"bold"}}>Decline</p> }
+                    {res.decline && <p className='text-white btn btn-danger' style={{fontWeight:"bold"}}>Declined</p> }
                     
                     {res.approved && <p className='text-white btn btn-success' style={{fontWeight:"bold"}}>Approved</p> }
+                    <p className='text-mutes'>check your email</p>
                     
                     </td>
 
