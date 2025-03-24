@@ -16,7 +16,7 @@ const Home = ({FilteringProducts,handlegroundname}) => {
   useEffect(()=>{
 
     const fetchData=async()=>{
-      const FetchDatas= await fetch("http://localhost:3002/api/allproducts").then((res)=>res.json()).then((val)=>{
+      const FetchDatas= await fetch("https://turf-project-ecru.vercel.app/api/allproducts").then((res)=>res.json()).then((val)=>{
         dispatch(uploadProducts(val))
  })
     }
@@ -53,7 +53,7 @@ const Home = ({FilteringProducts,handlegroundname}) => {
               return <div className='col-lg-6 mt-5'>
 
                 <div className="card shadow" key={index} style={{borderRadius:"16px"}}>
-                  <img src={`http://localhost:3002/images/${val.image}`}  className='card-img' style={{height:"250px"}}/>
+                  <img src={`https://turf-project-ecru.vercel.app/images/${val.image}`}  className='card-img' style={{height:"250px"}}/>
 
                   <p style={{fontWeight:"bold"}} className='text-dark text-center mt-3'>{val.shopname}</p>
 

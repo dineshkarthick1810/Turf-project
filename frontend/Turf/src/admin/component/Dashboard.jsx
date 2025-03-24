@@ -20,7 +20,7 @@ const Dashboard = ({status}) => {
       useEffect(()=>{
     
         const fetchBookings=async()=>{
-          const Bookings=await fetch("http://localhost:3002/api/bookings").then((res)=>res.json()).then((val)=>{
+          const Bookings=await fetch("https://turf-project-ecru.vercel.app/api/bookings").then((res)=>res.json()).then((val)=>{
             setBookings(val)
             
           })

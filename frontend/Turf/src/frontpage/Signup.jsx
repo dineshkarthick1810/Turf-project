@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import VisibilityIcon from '@mui/icons-material/Visibility';
-import ClipLoader from "react-spinners/ClipLoader"
 import "../../src/login.css"
 
 
@@ -36,7 +35,7 @@ const Signup = ({handlelogin,setrole,role}) => {
 
 
      try{
-        const Fetching=await fetch("http://localhost:3002/api/signup",{
+        const Fetching=await fetch("https://turf-project-ecru.vercel.app/api/signup",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"

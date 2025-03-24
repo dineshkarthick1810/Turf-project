@@ -15,7 +15,7 @@ const Product = ({ Phonenumber,shopname }) => {
 
     useEffect(()=>{
         const getReviews=async()=>{
-            const Reviews=await fetch("http://localhost:3002/api/reviews").then((res)=>res.json()).then((val)=>{
+            const Reviews=await fetch("https://turf-project-ecru.vercel.app/api/reviews").then((res)=>res.json()).then((val)=>{
                 dispatch(addReviews(val))
             })
 
@@ -85,7 +85,7 @@ console.log(filteredReviews)
             decline:false
         }
         console.log(datas)
-        const Bookings = await fetch("http://localhost:3002/api/bookings", {
+        const Bookings = await fetch("https://turf-project-ecru.vercel.app/api/bookings", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

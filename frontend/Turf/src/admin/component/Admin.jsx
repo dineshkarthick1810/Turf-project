@@ -96,7 +96,7 @@ const Admin = () => {
 
 
     try {
-      const postData = await fetch("http://localhost:3002/api/addproducts", {
+      const postData = await fetch("https://turf-project-ecru.vercel.app/api/addproducts", {
         method: "POST",
         body: formdata
 

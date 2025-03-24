@@ -27,7 +27,7 @@ const handledata=(data)=>{
 console.log(data)
 data.role=role
     try{
-        const uploadData=fetch('http://localhost:3002/api/login',{
+        const uploadData=fetch('https://turf-project-ecru.vercel.app/api/login',{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
