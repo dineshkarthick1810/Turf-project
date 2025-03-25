@@ -98,7 +98,8 @@ const Admin = () => {
     try {
       const postData = await fetch("https://turf-project-04az.onrender.com/api/addproducts", {
         method: "POST",
-        body: formdata
+        body: formdata,
+        mode:"cors"
 
       }).then((res) => res.json()).then((val) => {
         console.log(val)

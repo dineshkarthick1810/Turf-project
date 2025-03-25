@@ -32,7 +32,8 @@ data.role=role
             headers:{
                 "Content-Type":"application/json"
             },
-            body:JSON.stringify(data)
+            body:JSON.stringify(data),
+            mode:"cors"
         }).then((val)=>val.json()).then((res)=>{
 
 console.log(res)

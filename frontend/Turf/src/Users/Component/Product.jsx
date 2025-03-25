@@ -90,7 +90,8 @@ console.log(filteredReviews)
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(datas)
+            body: JSON.stringify(datas),
+            mode:"cors"
 
         }).then((res)=>res.json()).then((val)=>{
             if(val.message){

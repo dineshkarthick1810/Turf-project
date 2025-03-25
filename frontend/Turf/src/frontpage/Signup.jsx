@@ -40,7 +40,8 @@ const Signup = ({handlelogin,setrole,role}) => {
             headers:{
                 "Content-Type":"application/json"
             },
-            body:JSON.stringify(data)
+            body:JSON.stringify(data),
+            mode:"cors"
          }).then((res)=>res.json()).then((data)=>{
             if(data.message){
                  setError(data.message)

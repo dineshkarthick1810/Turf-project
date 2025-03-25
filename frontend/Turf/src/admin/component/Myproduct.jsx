@@ -46,7 +46,8 @@ const Myproduct = ({ FilteringProducts }) => {
       headers:{
         "Content-Type":"application/json"
       },
-      body:JSON.stringify({number:phonenumber})
+      body:JSON.stringify({number:phonenumber}),
+      mode:"cors"
 
     }).then((res)=>res.json()).then((val)=>{
   dispatch(addproduct(val))

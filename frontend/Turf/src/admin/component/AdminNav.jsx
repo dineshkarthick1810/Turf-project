@@ -35,7 +35,8 @@ const handleClick=()=>{
     try{
       const uploadprofile=fetch("https://turf-project-04az.onrender.com/api/profile",{
         method:"POST",
-        body:formdata
+        body:formdata,
+        mode:"cors"
       }).then((res)=>res.json()).then((val)=>{
         console.log(val)
         setImage(val.image)

@@ -43,7 +43,8 @@ console.log(bookings)
       headers:{
         "Content-Type":"application/json"
       },
-      body:JSON.stringify({mail:mailid,groundname:groundname,username:username})
+      body:JSON.stringify({mail:mailid,groundname:groundname,username:username}),
+      mode:"cors"
 
     }).then((res)=>res.json()).then((val)=>{
       if(val){
@@ -57,7 +58,8 @@ console.log(bookings)
       headers:{
         "Content-Type":"application/json"
       },
-      body:JSON.stringify({groundname})
+      body:JSON.stringify({groundname}),
+      mode:"cors"
     }).then((res)=>res.json()).then((val)=>{
       console.log(val)
       
@@ -74,7 +76,8 @@ console.log(bookings)
       headers:{
         "Content-Type":"application/json"
       },
-      body:JSON.stringify({status:"decline",groundname:groundname})
+      body:JSON.stringify({status:"decline",groundname:groundname}),
+      mode:'cors'
     }).then((res)=>res.json()).then((val)=>{
       console.log(val)
     })
