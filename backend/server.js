@@ -7,7 +7,7 @@ const bodyparser=require("body-parser")
 const corsOptions = {
     origin: 'https://turf-project-gold.vercel.app',  // Frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    allowedHeaders: ['Content-Type'],
     credentials: true,  // If you need to include cookies or credentials in the request
     preflightContinue: false,  // This is important for preflight requests
     optionsSuccessStatus: 204,  // For legacy browsers
