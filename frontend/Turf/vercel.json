@@ -1,18 +1,8 @@
 {
-    "version": 2,
-    "builds": [
+    "rewrites": [
       {
-        "src": "frontend/Turf/package.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "frontend/Turf/dist"  
-        }
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/frontend/Turf/dist/$1"  
+        "source": "/(.*)",
+        "destination": "/"  
       }
     ]
   }
