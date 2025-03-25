@@ -12,7 +12,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/frontend/Turf/$1"  
+        "dest": "/frontend/Turf/dist/$1"  
       }
     ]
   }
