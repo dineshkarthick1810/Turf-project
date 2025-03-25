@@ -15,7 +15,7 @@ const Product = ({ Phonenumber,shopname }) => {
 
     useEffect(()=>{
         const getReviews=async()=>{
-            const Reviews=await fetch("https://turf-project-ecru.vercel.app/api/reviews").then((res)=>res.json()).then((val)=>{
+            const Reviews=await fetch("https://turf-project-04az.onrender.com/api/reviews").then((res)=>res.json()).then((val)=>{
                 dispatch(addReviews(val))
             })
 
@@ -85,7 +85,7 @@ console.log(filteredReviews)
             decline:false
         }
         console.log(datas)
-        const Bookings = await fetch("https://turf-project-ecru.vercel.app/api/bookings", {
+        const Bookings = await fetch("https://turf-project-04az.onrender.com/api/bookings", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -190,7 +190,7 @@ console.log(filteredReviews)
     return <>
     <div  className='mt-3' style={{display:"flex",justifyContent:"space-between"}}>
     <div style={{display:"flex"}}>
-    <img src={`http://localhost:3002/images/${res.profile}`} style={{height:"60px",width:"60px",borderRadius:"50%",backgroundSize:"cover"}} />
+    <img src={`https://turf-project-04az.onrender.com/images/${res.profile}`} style={{height:"60px",width:"60px",borderRadius:"50%",backgroundSize:"cover"}} />
     <p className='text-secondary ms-5' style={{fontWeight:"bold"}} >{res.username}</p>
     </div>
     
