@@ -10,6 +10,7 @@ const UserSignup = require("../Schemas/UserSignup")
 const UserProfile = require("../Schemas/UserProfile")
 const reviews = require("../Schemas/Reviews")
 const Bookings = require("../Schemas/Bookings")
+const cors=require("cors")
 
 
 
