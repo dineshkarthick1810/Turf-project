@@ -14,7 +14,7 @@ const Homepage = () => {
   useEffect(()=>{
 
     const fetchBookings=async()=>{
-      const Bookings=await fetch("https://turf-project-04az.onrender.com/api/bookings").then((res)=>res.json()).then((val)=>{
+      const Bookings=await fetch("https://turf-project-n38p.vercel.app/api/bookings").then((res)=>res.json()).then((val)=>{
         setBookings(val)
         
       })
@@ -38,7 +38,7 @@ console.log(bookings)
   const handleApprove=async (mailid,groundname,username)=>{
     //processing for mail to users using nodemailer and send user maild to server to send email to that user
 
-    const sendEmail=await fetch("https://turf-project-04az.onrender.com/api/sendEmail",{
+    const sendEmail=await fetch("https://turf-project-n38p.vercel.app/api/sendEmail",{
       method:"POST",
       headers:{
         "Content-Type":"application/json"
@@ -53,7 +53,7 @@ console.log(bookings)
     })
 
    
-    const sendId= await  fetch("https://turf-project-04az.onrender.com/api/bookings",{
+    const sendId= await  fetch("https://turf-project-n38p.vercel.app/api/bookings",{
       method:"PUT",
       headers:{
         "Content-Type":"application/json"
@@ -71,7 +71,7 @@ console.log(bookings)
   //handling decline feature
 
   const handleDecline=(groundname)=>{
-    const PostDetails=fetch("https://turf-project-04az.onrender.com/api/bookings",{
+    const PostDetails=fetch("https://turf-project-n38p.vercel.app/api/bookings",{
       method:"PUT",
       headers:{
         "Content-Type":"application/json"

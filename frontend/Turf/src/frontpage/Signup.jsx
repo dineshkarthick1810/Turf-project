@@ -35,7 +35,7 @@ const Signup = ({handlelogin,setrole,role}) => {
 
 
      try{
-        const Fetching=await fetch("https://turf-project-04az.onrender.com/api/signup",{
+        const Fetching=await fetch("https://turf-project-n38p.vercel.app//api/signup",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"

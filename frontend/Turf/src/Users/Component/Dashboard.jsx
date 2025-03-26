@@ -13,7 +13,7 @@ const Dashboard = () => {
    
        useEffect(()=>{
             const fetchBookings=async()=>{
-                 const Bookings=await fetch("https://turf-project-04az.onrender.com/api/bookings").then((res)=>res.json()).then((val)=>{
+                 const Bookings=await fetch("https://turf-project-n38p.vercel.app//api/bookings").then((res)=>res.json()).then((val)=>{
                    setBookings(val)
                    
                    

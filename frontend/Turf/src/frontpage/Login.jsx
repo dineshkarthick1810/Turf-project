@@ -27,7 +27,7 @@ const handledata=(data)=>{
 console.log(data)
 data.role=role
     try{
-        const uploadData=fetch('https://turf-project-04az.onrender.com/api/login',{
+        const uploadData=fetch('https://turf-project-n38p.vercel.app//api/login',{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"

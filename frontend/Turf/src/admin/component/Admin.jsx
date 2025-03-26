@@ -96,7 +96,7 @@ const Admin = () => {
 
 
     try {
-      const postData = await fetch("https://turf-project-04az.onrender.com/api/addproducts", {
+      const postData = await fetch("https://turf-project-n38p.vercel.app/api/addproducts", {
         method: "POST",
         body: formdata
 
