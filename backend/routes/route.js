@@ -67,7 +67,7 @@ routes.post("/addproducts",(req, res) => {
         }
 
         const data = req.body
-        data.image = req.file.filename
+        data.image = req.file.filename || req.file.fieldname
 
 
         const uploadProducts = Products.create(data)
