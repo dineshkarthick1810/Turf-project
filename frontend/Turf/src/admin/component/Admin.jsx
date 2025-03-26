@@ -102,16 +102,7 @@ const Admin = () => {
 
       }).then((res) => res.json()).then((val) => {
         console.log(val)
-        // dispatch(addproduct(val))
-      })
-
-    } catch (err) {
-      console.log(err)
-
-    }
-
-
-    const name = document.getElementById("name")
+        const name = document.getElementById("name")
     const shopname = document.getElementById("shopname")
     const phonenumber = document.getElementById("phonenumber")
     const price = document.getElementById("price")
@@ -125,7 +116,17 @@ const Admin = () => {
     address.value = ""
     description.value = ""
     location.value=""
-    toast.success("successfully uploaded")
+        toast.success("successfully uploaded")
+      })
+
+    } catch (err) {
+      console.log(err)
+
+    }
+
+
+   
+    
 
 
 
