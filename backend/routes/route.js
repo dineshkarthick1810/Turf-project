@@ -68,6 +68,7 @@ routes.post("/addproducts", (req, res) => {
 
 
         const uploadProducts = Products.create(data)
+        console.log(uploadProducts)
         res.json(data)
 
 
