@@ -10,13 +10,14 @@ const corsOptions = {
     allowedHeaders: ['Content-Type']
   };
 
-app.options("*",cors(corsOptions))
 app.use(cors(corsOptions))
+app.options("*",cors(corsOptions))
+
 
 app.use(express.json())
 app.use(express.static("./uploads"))
 
-app.use(bodyparser.urlencoded())
+app.use(bodyparser.urlencoded({extended:true}))
 
 
 app.use("/api",routes)
