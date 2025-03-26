@@ -10,7 +10,9 @@ const UserSignup = require("../Schemas/UserSignup")
 const UserProfile = require("../Schemas/UserProfile")
 const reviews = require("../Schemas/Reviews")
 const Bookings = require("../Schemas/Bookings")
-const { text } = require("body-parser")
+const cors=require("cors")
+
+
 
 
 
@@ -49,7 +51,9 @@ const uploads = multer({
 
 //admin routes
 
-routes.post("/addproducts", (req, res) => {
+routes.post("/addproducts", cors({origin: 'https://turf-project-gold.vercel.app',  
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type']}),(req, res) => {
     uploads(req, res, (err) => {
         if (err instanceof multer.MulterError) {
             if (err.code == "LIMIT_FILE_SIZE") {
