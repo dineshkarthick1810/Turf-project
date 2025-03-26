@@ -249,7 +249,7 @@ routes.post("/profile", (req, res) => {
 
 
             const data = req.body
-            data.profileimage = req.file.filename
+            data.profileimage = req.file.filename || req.file.fieldname
             console.log(data)
             if (data.role == "admin") {
                 console.log(data)
