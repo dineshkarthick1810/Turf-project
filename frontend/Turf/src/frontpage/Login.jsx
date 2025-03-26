@@ -27,13 +27,12 @@ const handledata=(data)=>{
 console.log(data)
 data.role=role
     try{
-        const uploadData=fetch('https://turf-project-n38p.vercel.app//api/login',{
+        const uploadData=fetch('https://turf-project-n38p.vercel.app/api/login',{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
             },
             body:JSON.stringify(data),
-            mode:"cors"
         }).then((val)=>val.json()).then((res)=>{
 
 console.log(res)
