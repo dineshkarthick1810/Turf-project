@@ -52,29 +52,43 @@ const uploads = multer({
 
 //admin routes
 
-routes.post("/addproducts",cors(),async(req, res) => {
-    uploads(req, res, (err) => {
-        if (err instanceof multer.MulterError) {
-            if (err.code == "LIMIT_FILE_SIZE") {
-                res.json({ message: "file size exceeds" })
+routes.post("/addproducts", cors(), (req, res) => {
+    uploads(req, res, async (err) => {
+        if (err) {
+            if (err instanceof multer.MulterError) {
+                if (err.code == "LIMIT_FILE_SIZE") {
+                    return res.json({ message: "File size exceeds limit" });
+                }
+                if (err.code == "LIMIT_UNEXPECTED_FILE") {
+                    return res.json({ message: "Unsupported file format" });
+                }
             }
-            if (err.code == "LIMIT_UNEXPECTED_FILE") {
-                res.json({ message: "unsupported file" })
-            }
+            return res.json({ message: "File upload error", error: err });
+        }
 
+        // If no file is uploaded, return an error
+        if (!req.file) {
+            return res.status(400).json({ message: "No file uploaded" });
+        }
 
-            return
-        } })
+        try {
+            // Create product data with uploaded file
+            const data = {
+                ...req.body,
+                image: req.file.filename, // Assign image filename
+            };
 
-        const data = req.body
-        // data.image = req.file.fieldname
+            // Save to MongoDB
+            const uploadProducts = await Products.create(data);
+            console.log("Product uploaded:", uploadProducts);
+            res.json(uploadProducts);
+        } catch (error) {
+            console.error("Error saving product:", error);
+            res.status(500).json({ message: "Internal Server Error", error });
+        }
+    });
+});
 
-
-        const uploadProducts =await Products.create(data)
-        console.log(uploadProducts)
-        res.json(data)
-
-})
 
 
 //get all products
