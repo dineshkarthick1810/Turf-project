@@ -14,7 +14,7 @@ const Myproduct = ({ FilteringProducts }) => {
 
 
     const Fetchproducts = async () => {
-      const products = await fetch("https://turf-project-n38p.vercel.app/api/allproducts").then((res) => res.json()).then((val) => {
+      const products = await fetch("https://turf-project-04az.onrender.com/api/allproducts").then((res) => res.json()).then((val) => {
         dispatch(addproduct(val))
 
       })
@@ -41,7 +41,7 @@ const Myproduct = ({ FilteringProducts }) => {
  //for deleting products 
   const handleDelete=async(phonenumber)=>{
 
-    const DeleteData=await fetch("https://turf-project-n38p.vercel.app/api/Deleteproducts",{
+    const DeleteData=await fetch("https://turf-project-04az.onrender.com/api/Deleteproducts",{
       method:"DELETE",
       headers:{
         "Content-Type":"application/json"

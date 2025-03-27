@@ -37,7 +37,7 @@ const Reviews = ({shopname}) => {
         data.shopname=shopname
         console.log(data)
 
-        const postReviews=await fetch("https://turf-project-n38p.vercel.app/api/reviews",{
+        const postReviews=await fetch("https://turf-project-04az.onrender.com/api/reviews",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"

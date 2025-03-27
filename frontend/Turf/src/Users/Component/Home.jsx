@@ -16,7 +16,7 @@ const Home = ({FilteringProducts,handlegroundname}) => {
   useEffect(()=>{
 
     const fetchData=async()=>{
-      const FetchDatas= await fetch("https://turf-project-n38p.vercel.app/api/allproducts").then((res)=>res.json()).then((val)=>{
+      const FetchDatas= await fetch("https://turf-project-04az.onrender.com/api/allproducts").then((res)=>res.json()).then((val)=>{
         dispatch(uploadProducts(val))
  })
     }
