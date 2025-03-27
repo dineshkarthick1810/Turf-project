@@ -5,7 +5,7 @@ const app=express()
 const bodyparser=require("body-parser")
 
 const corsOptions = {
-    origin: 'https://turf-project-gold.vercel.app',  
+    origin: '*',  
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type']
   };
