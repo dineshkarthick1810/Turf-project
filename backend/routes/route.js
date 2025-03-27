@@ -17,7 +17,7 @@ const cors=require("cors")
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        const uploadPath = path.join(__dirname, "../uploads/images"); // Ensure correct path
+        const uploadPath = path.join("../uploads/images"); // Ensure correct path
         cb(null, uploadPath);
     },
     filename: (req, file, cb) => {
