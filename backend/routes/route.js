@@ -21,6 +21,7 @@ if (!fs.existsSync(uploadPath)) {
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
+        console.log(uploadPath)
         cb(null, uploadPath);
     },
     filename: (req, file, cb) => {
@@ -75,6 +76,7 @@ routes.post("/addproducts", cors(), (req, res) => {
             // Save to MongoDB
             const uploadProducts = await Products.create(data);
             console.log("Product uploaded:", uploadProducts);
+            console.log(req.file)
             res.json(uploadProducts);
         } catch (error) {
             console.error("Error saving product:", error);
