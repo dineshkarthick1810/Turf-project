@@ -238,7 +238,7 @@ routes.delete("/Deleteproducts", async (req, res) => {
 
 routes.post("/profile", cors(),(req, res) => {
 
-    uploads(req, res, (err) => {
+    upload(req, res, (err) => {
         if (err instanceof multer.MulterError) {
             if (err.code == "LIMIT_FILE_SIZE") {
                 res.json({ message: "file size exceeds" })
