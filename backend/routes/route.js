@@ -13,11 +13,13 @@ const Bookings = require("../Schemas/Bookings")
 const cors=require("cors")
 
 
-
+const uploadPath = path.join(__dirname,"../uploads/images"); // Ensure correct path
+if (!fs.existsSync(uploadPath)) {
+    fs.mkdirSync(uploadPath, { recursive: true });
+}
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        const uploadPath = path.join(__dirname,"../uploads/images"); // Ensure correct path
         cb(null, uploadPath);
     },
     filename: (req, file, cb) => {
