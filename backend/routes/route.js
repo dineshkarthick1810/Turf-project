@@ -52,7 +52,7 @@ const uploads = multer({
 
 //admin routes
 
-routes.post("/addproducts",async(req, res) => {
+routes.post("/addproducts",cors(),async(req, res) => {
     uploads(req, res, (err) => {
         if (err instanceof multer.MulterError) {
             if (err.code == "LIMIT_FILE_SIZE") {
@@ -67,7 +67,7 @@ routes.post("/addproducts",async(req, res) => {
         } })
 
         const data = req.body
-        data.image = req.file.filename || req.file.fieldname
+        data.image = req.file.fieldname
 
 
         const uploadProducts =await Products.create(data)
