@@ -26,7 +26,7 @@ const ProductDetails = ({Phonenumber}) => {
 {FilterData.map((val,index)=>{
 
    return <div style={{overflowX:"scroll"}}>
-<img src={`https://turf-project-04az.onrender.com/opt/render/project/src/backend/routes/uploads/images/${val.image}`} style={{width:"100%",height:"80vh"}} className='img-fluid'/>
+<img src={`https://turf-project-04az.onrender.com/uploads/${val.image}`} style={{width:"100%",height:"80vh"}} className='img-fluid'/>
 <p className='text-muted mt-3'>{val.description}</p>
 <table className='table table-dark mt-5' >
 

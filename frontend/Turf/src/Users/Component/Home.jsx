@@ -53,7 +53,7 @@ const Home = ({FilteringProducts,handlegroundname}) => {
               return <div className='col-lg-6 mt-5'>
 
                 <div className="card shadow" key={index} style={{borderRadius:"16px"}}>
-                  <img src={`https://turf-project-04az.onrender.com/opt/render/project/src/backend/routes/uploads/images/${val.image}`}  className='card-img' style={{height:"250px"}}/>
+                  <img src={`https://turf-project-04az.onrender.com/uploads/${val.image}`}  className='card-img' style={{height:"250px"}}/>
 
                   <p style={{fontWeight:"bold"}} className='text-dark text-center mt-3'>{val.shopname}</p>
 
