@@ -15,45 +15,36 @@ const cors=require("cors")
 
 
 
-
-
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, "./uploads/images")
-
+        const uploadPath = path.join(__dirname, "../uploads/images"); // Ensure correct path
+        cb(null, uploadPath);
     },
     filename: (req, file, cb) => {
-        cb(null, file.originalname.slice(0, file.originalname.indexOf(".")) + "_" + Date.now() + path.extname(file.originalname))
-
+        const uniqueSuffix = Date.now() + path.extname(file.originalname);
+        cb(null, file.fieldname + "_" + uniqueSuffix);
     }
+});
 
-})
-
-const size = 2 * 1000 * 1000
-const uploads = multer({
+const upload = multer({
     storage: storage,
-    limits: {
-        fileSize: size
-
-    },
+    limits: { fileSize: 2 * 1000 * 1000 }, // 2MB limit
     fileFilter: (req, file, cb) => {
-        const filetypes = /jpeg|jpg|png/
-        const mimetype = filetypes.test(file.mimetype)
-        const extension = filetypes.test(path.extname(file.originalname))
-        if (mimetype && extension) {
-            cb(null, true)
+        const allowedTypes = /jpeg|jpg|png/;
+        const isValid = allowedTypes.test(file.mimetype) && allowedTypes.test(path.extname(file.originalname));
+        if (isValid) {
+            cb(null, true);
+        } else {
+            cb(new Error("Only .jpeg, .jpg, .png files are allowed"));
         }
-        else {
-            cb("error ocured during filefilter validation")
-        }
-
     }
-}).single("image")
+}).single("image");
+
 
 //admin routes
 
 routes.post("/addproducts", cors(), (req, res) => {
-    uploads(req, res, async (err) => {
+    upload(req, res, async (err) => {
         if (err) {
             if (err instanceof multer.MulterError) {
                 if (err.code == "LIMIT_FILE_SIZE") {
