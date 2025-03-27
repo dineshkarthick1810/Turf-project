@@ -63,7 +63,7 @@ const Mycart = () => {
         {filterBookings.map((res,index)=>{
             return  <tr>
                 <td>
-                <img src={`https://turf-project-04az.onrender.com/uploads/${sessionStorage.getItem("imageUrl")}`} className='img-fluid' style={{ borderRadius: "50%",width:"70px",height:"70px" }} />
+                <img src={`https://turf-project-04az.onrender.com/images/${sessionStorage.getItem("imageUrl")}`} className='img-fluid' style={{ borderRadius: "50%",width:"70px",height:"70px" }} />
                 </td>
                 <td>{res.groundname}</td>
                 <td>{res.date}</td>

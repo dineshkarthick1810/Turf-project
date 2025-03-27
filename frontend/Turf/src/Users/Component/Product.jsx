@@ -122,7 +122,7 @@ console.log(filteredReviews)
                         return <div>
                             <div className='row mt-5 '   >
                                 <div className='col-md-4'>
-                                    <img src={`https://turf-project-04az.onrender.com/uploads/${val.image}`} className='img-fluid' style={{ borderRadius: "10px" }} />
+                                    <img src={`https://turf-project-04az.onrender.com/images/${val.image}`} className='img-fluid' style={{ borderRadius: "10px" }} />
                                 </div>
 
                                 <div className='col-md-8 forproduct'>
@@ -191,7 +191,7 @@ console.log(filteredReviews)
     return <>
     <div  className='mt-3' style={{display:"flex",justifyContent:"space-between"}}>
     <div style={{display:"flex"}}>
-    <img src={`https://turf-project-04az.onrender.com/uploads/${res.profile}`} style={{height:"60px",width:"60px",borderRadius:"50%",backgroundSize:"cover"}} />
+    <img src={`https://turf-project-04az.onrender.com/images/${res.profile}`} style={{height:"60px",width:"60px",borderRadius:"50%",backgroundSize:"cover"}} />
     <p className='text-secondary ms-5' style={{fontWeight:"bold"}} >{res.username}</p>
     </div>
     
