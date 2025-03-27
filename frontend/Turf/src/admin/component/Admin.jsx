@@ -98,8 +98,7 @@ const Admin = () => {
     try {
       const postData = await fetch("https://turf-project-n38p.vercel.app/api/addproducts", {
         method: "POST",
-        body: formdata,
-        mode:"no-cors"
+        body: formdata
 
       }).then((res) => res.json()).then((val) => {
         console.log(val)
