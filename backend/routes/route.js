@@ -67,7 +67,7 @@ routes.post("/addproducts",cors(),async(req, res) => {
         } })
 
         const data = req.body
-        data.image = req.file.fieldname
+        // data.image = req.file.fieldname
 
 
         const uploadProducts =await Products.create(data)
