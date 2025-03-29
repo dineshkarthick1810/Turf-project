@@ -105,7 +105,10 @@ const Dashboard = ({status}) => {
 
 
                 {/* table */}
-                <table className='table table-striped table-dark mt-5'>
+                <div className='table-resposive'>
+
+              
+                <table className='table table-striped table-dark mt-5 fortable'>
                     <thead>
                         <tr>
                             <th>Username</th>
@@ -147,6 +150,7 @@ const Dashboard = ({status}) => {
 
                    
                 </table>
+                </div>
 
             </div>
 
