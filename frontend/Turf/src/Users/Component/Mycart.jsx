@@ -32,7 +32,7 @@ const Mycart = () => {
    
 
   return (
-   <div className='container-fluid' >
+   <div className='container-fluid' style={{overflowX:"hidden"}}>
    
    
                <div style={{ display: "flex" }} className='bg-primary-subtle'>
