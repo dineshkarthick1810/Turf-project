@@ -48,7 +48,7 @@ const Mycart = () => {
 
 <div className='mt-5 table-responsive '>
 
-<table className='table table-striped table-dark fortable'>
+<table className='table table-striped table-dark fortable' style={{overflowX:"scroll"}}>
     <thead>
         <tr>
             <th>User</th>
@@ -73,7 +73,7 @@ const Mycart = () => {
                     {res.decline && <p className='text-white btn btn-danger' style={{fontWeight:"bold"}}>Declined</p> }
                     
                     {res.approved && <p className='text-white btn btn-success' style={{fontWeight:"bold"}}>Approved</p> }
-                    <p className='text-mutes'>check your email</p>
+                  {!res.decline && !res.approved ? <p className='text-mutes'>check your email</p>:<></>}  
                     
                     </td>
 
