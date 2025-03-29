@@ -58,7 +58,7 @@ const handleLogout=()=>{
 sessionStorage.removeItem("id")
 sessionStorage.removeItem("imageUrl")
 sessionStorage.removeItem("role")
-navigate("/")
+navigate("/",{replace:true})
 
 }
   return (

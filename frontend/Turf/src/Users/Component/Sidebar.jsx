@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js"
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, replace, useNavigate } from 'react-router-dom'
 import HomeIcon from '@mui/icons-material/Home';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import DashboardIcon from '@mui/icons-material/Dashboard';
@@ -59,7 +59,7 @@ const handleLogout=()=>{
   sessionStorage.removeItem("id")
   sessionStorage.removeItem('imageUrl')
   sessionStorage.removeItem("role")
-  navigate("/")
+  navigate("/",{replace:true})
 
 }
 
