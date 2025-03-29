@@ -108,7 +108,7 @@ const Dashboard = ({status}) => {
                 <div className='table-responsive'>
 
               
-                <table className='table table-striped table-dark mt-5 fortable'>
+                <table className='table table-striped table-dark mt-5 fortable' style={{overflowX:"scroll"}}>
                     <thead>
                         <tr>
                             <th>Username</th>
